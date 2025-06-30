@@ -83,7 +83,9 @@ struct queue_end_s {
 #elif defined(PICO_RP2040) || defined(PICO_RP2350)
 // Raspberry Pico and Pico 2
 #include "fas_arch/arduino_rp_pico.h"
-
+#elif defined(ARDUINO_ARCH_STM)
+// STM32 family using arduino core
+#include "fas_arch/arduino_stm32.h"
 #else
 #error "Unsupported devices"
 #endif
